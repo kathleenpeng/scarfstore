@@ -1,0 +1,40 @@
+<div class="mainCont">
+<p id="notice"><%= notice %></p>
+
+ <div id="itemsContainer">
+  
+  <h2>Recently Purchased ......</h2>
+     
+      <% @items.limit(5).order(id: :desc).each do |item| %>
+      <div class="itemhols">
+       <h4><%= item.title %></h4>
+       <img src="/assets/<%= item.image_url %>" class="welcomeIm"/>
+       
+        
+       
+       <p>Price <%= number_to_currency(item.price, :unit => "€") %>
+      
+        <a href="/cart/<%= item.id %>" class="button">Add to Cart</a>
+       
+       
+       
+     </p>
+       
+       <p>
+         
+         
+        
+      
+       </p>
+        
+      </div>
+    <% end %>
+      
+</div>
+
+<br>
+
+
+
+
+</div>

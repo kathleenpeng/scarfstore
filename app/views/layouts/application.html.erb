@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <title><%= yield(:title) %> | The Scarf Store</title>
+    
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+            
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   </head>
+<body>
+    
+  
+    
+    <header class="headSec">
+        <div class="row">
+        
+        <div class="topnavleft">
+      
+          <h1><%= link_to "Scarf Store", "/" %></h1>
+          
+      
+      </div>
+      
+       <div class="topnavmid">
+        <%= form_tag("/search", :method =>"post") do %>
+        <%= text_field_tag(:searchbox) %>
+        
+        <%= submit_tag("search") %>
+        
+        <% end %>
+        
+        </div>
+        
+         <div class="topnavright">
+             
+      <ul> 
+        
+        <% if user_signed_in? %>
+        <li><a href="#">Hi <%= current_user.email %></a></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+        <li><%= link_to "Profile", edit_user_registration_path %></li>
+         <li><%= link_to "View Orders", "/orders" %></li>
+
+        <% else %>
+        <li><%= link_to 'Register', new_user_registration_path %></li>
+        <li><%= link_to 'Sign In', new_user_session_path %></li>
+       
+        <% end %>
+        </ul>
+        </div>
+    </div>
+  
+      <ul class="row2">
+       <div class="row-left">
+        <li><%= link_to "Home", "/" %></li>
+        <li><%= link_to "Products", "/items" %></li>
+        
+        <li><%= link_to "Categories", help_path %></li>
+        <li><%= link_to "About", about_path %></li>
+      </div>
+        <div  class="row-right">
+        <li><%= link_to "View Cart", "/cart" %>
+         
+        </div>
+      
+        
+        <% if session[:login] == 1 %>
+            <li><% link_to "Old Log Out", logout_path %></li>
+        <% else %>
+        
+            <li><% link_to "Old Log In", login_path %></li>
+        
+        <% end %> 
+      </ul>
+    </header>
+    
+    
+    
+          <div class="container">
+           <%= yield %>
+          </div>
+    <footer class="foot">
+      
+      <p>Copyright &copy; ScarfStore Ltd. 2019</p>
+      <!--<a href="/cart/clear" class="button">Clear Cart</a>-->
+      <% if user_signed_in? %>
+       <% if current_user.admin?  %>
+      
+      <a href="/showuser" class="button">Show Users</a>
+       <%= link_to 'New category', new_category_path, :class=> "button" %>
+      <% end %>
+      <% end %>
+       
+       
+     
+     
+    </footer>
+    
+  </body>
+</html>

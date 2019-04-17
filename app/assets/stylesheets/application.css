@@ -1,0 +1,351 @@
+
+ 
+.headSec {
+    
+    background: url(/assets/site/golfcourse.jpg);
+    min-height:20px;
+    background-color: #28ada6;
+    width: 100%;
+    margin-bottom:10px;
+    overflow: auto;
+    
+}
+
+.headSec h1 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+    
+}
+
+h1,h2{
+    line-height: 2.2rem;
+}
+
+.row{
+    display: flex;
+    
+}
+.topnavleft{
+    display: flex;
+    flex-basis: 20%;
+    align-items: center;
+    /*order: 1;*/
+}
+
+.topnavmid{
+     display: flex;
+      align-items: center;
+      
+   
+    flex-basis: 28%;
+    /*order: 2;*/
+    
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*display: inline-block;*/
+    width: 180px;
+    
+    border: 0;
+    font-size: 13px;
+    padding: 6px;
+   
+    
+}
+
+.topnavright{
+    display: flex;
+    flex-basis: 52%;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right
+    /*order: 3*/
+}
+
+
+.topnavright ul li a:hover{
+    
+   color: #333;
+   background-color: #28ada6;
+}
+
+ul { 
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 1rem;
+    color: white;
+    /*background-color: #333;    */
+    
+}
+
+ul.row2 { 
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;    
+    
+}
+
+li {float:left;}
+
+h1 a{
+    text-decoration: none;
+    color: white;
+}
+li a {
+    display: block;
+    color: #ebebeb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor:pointer;
+    
+}
+
+li a:hover {
+    
+    color: #ffffff;
+    background-color: #000000;
+    
+}
+.row-right{
+    flex: 1;
+    float: right;
+}
+.row-left{
+    flex: 1;
+    
+}
+
+
+
+.mainCont { 
+    
+    margin: auto;
+    width:80%;
+    /*border: 3px solid #b3e0ff;*/
+    padding: 10px;
+    text-align: center;
+}
+
+.welcomeIm {width: 50%;}
+.welcomeIm:hover {
+    width: 50%;
+    cursor: pointer;
+    opacity: .7;
+    
+}
+
+.welcome {width: 24%;}
+
+.welcome:hover {
+    width: 24.1%;
+    opacity: .6;
+    
+}
+tr.navtitle{
+    background: #b7b7b7;
+}
+
+tr.navtitle:hover{
+    background: #b7b7b7;
+}
+
+
+.foot {
+    min-height: 45px;
+    background-color: #28ada6;
+    width: 100%;
+    margin-top: 10px;
+    overflow: auto;
+    text-align: center;
+    color: white;
+    
+    
+}
+
+.container {
+     /*background: url(/assets/site/clubhead.png);*/
+
+      background-repeat:no-repeat;
+      background-position:right bottom;
+      width: 100%;
+      margin: 2%;
+      min-height: 700px;
+}
+
+
+#itemsContainer {
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+
+#itemsContainer h1 {
+   display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    line-height: 18px;
+    font-size:  2.5em;
+    font-weight: bold;
+    line-height: 1em;
+    
+}
+
+.itemhols {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 21%;
+    padding:10px;
+    min-height: 300px;
+   
+}
+span.itemhols {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 30%;
+    padding:10px;
+    min-height: 300px;
+   
+}
+
+
+.itemhols h1 {
+   display: block;
+    color: #4CAF50;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px
+    
+}
+
+
+.itemhols p {
+   display: block;
+    color: #4CAF50;
+    line-height: 25px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px
+    
+}
+
+.priceStyle{
+    color: red;
+}
+
+.itemholsIm {
+    width: 100%; 
+   
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    
+}
+
+
+.button {
+    background-color: #84c99e;
+    border-radius: 5px;
+    
+    /*border: none;*/
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45a049;
+    border-radius: 5px;
+    color: white;
+   
+}
+
+input[type=text], select {
+    width: 73%;
+    padding: 10px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border: none;
+    box-sizing: border-box;
+}
+
+.topnavmid input[type=submit] {
+    float: right;
+    width: 27%;
+    background-color: red;
+    
+    color: white;
+    padding: 10px 16px;
+    margin: 8px 0;
+    border: none;
+    border-left: none;
+    cursor: pointer;
+}
+
+
+topnavmid::after {
+  content: "";
+  clear: both;
+  
+}
+
+input[type=submit] {
+    float: left;
+    width: 100%;
+    background-color: #84c99e;
+    
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-left: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
